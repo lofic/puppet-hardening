@@ -27,7 +27,7 @@ class hardening {
             type      => 'password',
             control   => 'sufficient',
             module    => 'pam_unix.so',
-            arguments => 'sha512 shadow try_first_pass use_authtok',
+            arguments => [ 'sha512', 'shadow', 'try_first_pass', 'use_authtok' ],
             position  => 'before module pam_deny.so',
         }
 
@@ -37,7 +37,7 @@ class hardening {
             type      => 'password',
             control   => 'sufficient',
             module    => 'pam_unix.so',
-            arguments => 'sha512 shadow try_first_pass use_authtok',
+            arguments => [ 'sha512', 'shadow', 'try_first_pass', 'use_authtok' ],
             position  => 'before module pam_deny.so',
         }
 
