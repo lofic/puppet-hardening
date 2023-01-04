@@ -8,6 +8,7 @@ class hardening::el8() {
   include hardening::kernel
   include hardening::mounts
   include hardening::network
+  include hardening::openscap
   include hardening::sudo
 
 }
