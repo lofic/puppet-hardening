@@ -9,4 +9,14 @@ class hardening::umask {
     match    => '^\s*umask\s+\d'
   }
 
+  # Ensure the Default Umask is Set Correctly in login.defs
+  # xccdf_org.ssgproject.content_rule_accounts_umask_etc_login_defs
+  file_line { 'umask - login.defs':
+    path     => '/etc/logins.def',
+    line     => 'UMASK       027',
+    multiple => false,
+    match    => '^\s*UMASK\s+\d'
+  }
+
+
 }
