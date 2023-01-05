@@ -12,6 +12,7 @@ class hardening::el8() {
   include hardening::features::openscap
   include hardening::features::pam
   include hardening::features::passwords
+  include hardening::features::services
   include hardening::features::session
   include hardening::features::sudo
   include hardening::features::umask
