@@ -9,9 +9,13 @@ class hardening::mounts {
 
   $modprobe_cis =  @("MCIS"/L)
       install cramfs /bin/true
+      blacklist cramfs
       install squashfs /bin/true
+      blacklist squashfs
       install udf /bin/true
+      blacklist udf
       install usb-storage /bin/true
+      blacklist usb-storage
       | MCIS
 
   file { '/etc/modprobe.d/cis.conf':
