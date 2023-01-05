@@ -10,4 +10,5 @@ class hardening (
   Boolean $coredumps = false,
   Boolean $ip_forwarding = false,
   Numeric $interactive_session_timeout_sec = 900,
+  String  $authselect_profile = 'sssd',
 ) {}
