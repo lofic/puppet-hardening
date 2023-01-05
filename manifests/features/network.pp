@@ -1,4 +1,4 @@
-class hardening::network {
+class hardening::features::network {
 
   $sysctl_net =  @("SCN"/L)
       net.ipv4.tcp_syncookies = 1

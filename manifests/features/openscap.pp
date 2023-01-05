@@ -1,6 +1,6 @@
 # Provide OpenSCAP to check the security of the system against some security
 # policies (like the CIS benchmark or the PCI-DSS baseline)
-class hardening::openscap {
+class hardening::features::openscap {
 
   package { 'openscap-scanner':
     ensure  => present,

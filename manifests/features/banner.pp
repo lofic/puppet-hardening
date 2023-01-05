@@ -7,7 +7,7 @@
 # xccdf_org.ssgproject.content_rule_file_permissions_etc_issue
 # xccdf_org.ssgproject.content_rule_file_permissions_etc_motd
 
-class hardening::banner {
+class hardening::features::banner {
 
   $bannerdefaults = {
       ensure => present,

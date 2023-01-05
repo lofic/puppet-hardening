@@ -1,4 +1,4 @@
-class hardening::fileperms() {
+class hardening::features::fileperms() {
 
   file { '/etc/cron.hourly':
     ensure => directory,

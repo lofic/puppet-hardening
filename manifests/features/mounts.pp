@@ -5,7 +5,7 @@
 # xccdf_org.ssgproject.content_rule_kernel_module_udf_disabled
 # xccdf_org.ssgproject.content_rule_kernel_module_usb-storage_disabled
 
-class hardening::mounts {
+class hardening::features::mounts {
 
   $modprobe_cis =  @("MCIS"/L)
       install cramfs /bin/true

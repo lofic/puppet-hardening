@@ -1,4 +1,4 @@
-class hardening::pam {
+class hardening::features::pam {
 
   # Enforce usage of pam_wheel for su authentication
   # xccdf_org.ssgproject.content_rule_use_pam_wheel_for_su

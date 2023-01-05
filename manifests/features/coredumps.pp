@@ -1,4 +1,4 @@
-class hardening::coredumps inherits hardening {
+class hardening::features::coredumps inherits hardening {
 
   $no_core =  @("NCL"/L)
       # No core dumps

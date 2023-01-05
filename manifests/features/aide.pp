@@ -1,6 +1,6 @@
 # AIDE - Advanced Intrusion Detection Environment
 
-class hardening::aide inherits hardening {
+class hardening::features::aide inherits hardening {
 
   # Install AIDE
   # xccdf_org.ssgproject.content_rule_package_aide_installed

@@ -1,18 +1,18 @@
 class hardening::el8() {
 
-  include hardening::aide
-  include hardening::banner
-  include hardening::chrony
-  include hardening::coredumps
-  include hardening::fileperms
-  include hardening::kernel
-  include hardening::mounts
-  include hardening::network
-  include hardening::pam
-  include hardening::passwords
-  include hardening::openscap
-  include hardening::session
-  include hardening::sudo
-  include hardening::umask
+  include hardening::features::aide
+  include hardening::features::banner
+  include hardening::features::chrony
+  include hardening::features::coredumps
+  include hardening::features::fileperms
+  include hardening::features::kernel
+  include hardening::features::mounts
+  include hardening::features::network
+  include hardening::features::pam
+  include hardening::features::passwords
+  include hardening::features::openscap
+  include hardening::features::session
+  include hardening::features::sudo
+  include hardening::features::umask
 
 }

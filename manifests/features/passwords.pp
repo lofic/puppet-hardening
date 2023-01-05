@@ -1,4 +1,4 @@
-class hardening::passwords {
+class hardening::features::passwords {
 
   file { 'pwquality.conf' :
     ensure => present,

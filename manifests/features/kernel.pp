@@ -1,4 +1,4 @@
-class hardening::kernel {
+class hardening::features::kernel {
 
     # xccdf_org.ssgproject.content_rule_sysctl_kernel_randomize_va_space
     # Enable Randomized Layout of Virtual Address Space

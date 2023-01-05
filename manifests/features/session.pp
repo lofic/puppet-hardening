@@ -1,6 +1,6 @@
 # Interactive session
 
-class hardening::session inherits hardening {
+class hardening::features::session inherits hardening {
 
   $ists = $hardening::interactive_session_timeout_sec
   $session_tmout = "declare -xr TMOUT=${ists}\n"
