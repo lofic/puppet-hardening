@@ -10,5 +10,6 @@ class hardening::el8() {
   include hardening::network
   include hardening::openscap
   include hardening::sudo
+  include hardening::umask
 
 }
