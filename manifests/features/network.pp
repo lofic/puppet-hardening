@@ -1,5 +1,8 @@
 class hardening::features::network inherits hardening {
 
+  # Disable Kernel Parameter for IP Forwarding on IPv4 Interfaces
+  # xccdf_org.ssgproject.content_rule_sysctl_net_ipv4_ip_forward
+
   $ip_forward = $hardening::ip_forwarding ? {
     true    => '1',
     default => '0'
@@ -34,5 +37,20 @@ class hardening::features::network inherits hardening {
       group   => 'root',
       mode    => '0644',
   }
+  $modprobe_net =  @("MN"/L)
+      install dccp /bin/true
+      blacklist dccp
+      install sctp /bin/true
+      blacklist sctp
+      | MN
+
+  file { '/etc/modprobe.d/net.conf':
+    ensure  =>  present,
+    content => $modprobe_net,
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0644',
+  }
+
 
 }
