@@ -8,4 +8,5 @@
 class hardening (
   Boolean $schedule_aide = false,
   Boolean $coredumps = false,
+  Numeric $interactive_session_timeout_sec = 900,
 ) {}
