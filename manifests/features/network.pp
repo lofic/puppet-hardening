@@ -8,6 +8,7 @@ class hardening::features::network inherits hardening {
     default => '0'
   }
 
+  # Network Related Kernel Runtime Parameters for Hosts and Routers
   $sysctl_net =  @("SCN"/L)
       net.ipv4.tcp_syncookies = 1
       net.ipv4.conf.all.send_redirects = 0
@@ -37,6 +38,12 @@ class hardening::features::network inherits hardening {
       group   => 'root',
       mode    => '0644',
   }
+
+  # Disable DCCP Support
+  # xccdf_org.ssgproject.content_rule_kernel_module_dccp_disabled
+  #
+  # Disable SCTP Support
+  # xccdf_org.ssgproject.content_rule_kernel_module_sctp_disabled
   $modprobe_net =  @("MN"/L)
       install dccp /bin/true
       blacklist dccp
