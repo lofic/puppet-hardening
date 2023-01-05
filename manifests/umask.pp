@@ -6,7 +6,7 @@ class hardening::umask {
     path     => '/etc/bashrc',
     line     => '       umask 027',
     multiple => true,
-    match    => '[\t ]*umask[\t ][\t ]*[0-9]'
+    match    => '^\s*umask\s+\d'
   }
 
 }
