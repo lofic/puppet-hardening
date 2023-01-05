@@ -1,4 +1,9 @@
-class hardening::features::network {
+class hardening::features::network inherits hardening {
+
+  $ip_forward = $hardening::ip_forwarding ? {
+    true    => '1',
+    default => '0'
+  }
 
   $sysctl_net =  @("SCN"/L)
       net.ipv4.tcp_syncookies = 1
@@ -18,6 +23,8 @@ class hardening::features::network {
       net.ipv4.conf.default.rp_filter = 1
       net.ipv6.conf.all.accept_ra = 0
       net.ipv6.conf.default.accept_ra = 0
+
+      net.ipv4.ip_forward=${ip_forward}
       | SCN
 
   file { '/etc/sysctl.d/network.conf':
