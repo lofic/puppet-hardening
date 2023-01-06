@@ -6,10 +6,19 @@ hardening::banner_message: |
   ** disclosed or used for any authorized purpose.                             **
   ** Unauthorized attempts and actions to access or use this system            **
   ** constitute an infringement and may lead to legal actions.                 **
-
+# With the company information :
 # This System, the software and information it contains and the devices
 # connected are the property of XXXX and exclusively reserved for authorized
 # users only.
 
-
-hardening::ssh_options: []
+hardening::ssh_options:
+  ClientAliveCountMax: '0'
+  HostbasedAuthentication: 'no'
+  IgnoreRhosts: 'yes'
+  LoginGraceTime: '60'
+  LogLevel: 'VERBOSE'
+  MaxAuthTries: '4'
+  MaxSessions: '10'
+  MaxStartups: '10:30:60'
+  PermitUserEnvironment: 'no'
+  PermitEmptyPasswords: 'no'
