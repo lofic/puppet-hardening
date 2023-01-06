@@ -10,3 +10,6 @@ hardening::banner_message: |
 # This System, the software and information it contains and the devices
 # connected are the property of XXXX and exclusively reserved for authorized
 # users only.
+
+
+hardening::ssh_options: []

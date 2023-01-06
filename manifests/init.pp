@@ -6,10 +6,11 @@
 # sshd hardening : see also https://github.com/lofic/puppet-ssh
 
 class hardening (
-  Boolean $schedule_aide = false,
-  Boolean $coredumps = false,
-  Boolean $ip_forwarding = false,
-  Numeric $interactive_session_timeout_sec = 900,
-  String  $authselect_profile = 'sssd',
   String  $banner_message,
+  Array   $ssh_options,
+  String  $authselect_profile = 'sssd',
+  Boolean $coredumps = false,
+  Numeric $interactive_session_timeout_sec = 900,
+  Boolean $ip_forwarding = false,
+  Boolean $schedule_aide = false,
 ) {}
