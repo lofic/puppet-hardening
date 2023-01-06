@@ -19,7 +19,6 @@ class hardening::features::banner inherits hardening {
   # Bannieres non modifiables, params de boot non lisibles
   file {
     default: * => $bannerdefaults;
-    '/boot/grub2/grub.cfg':;
     '/etc/issue.net':;
   }
 

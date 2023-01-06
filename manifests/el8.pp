@@ -3,7 +3,7 @@ class hardening::el8() {
   include hardening::features::aide
   include hardening::features::authselect
   include hardening::features::banner
-  include hardening::features::boot
+  include hardening::features::bootloader
   include hardening::features::chrony
   include hardening::features::coredumps
   include hardening::features::fileperms

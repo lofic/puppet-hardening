@@ -9,7 +9,7 @@ class hardening::features::journald {
     line     => 'Compress=yes',
     multiple => false,
     match    => '^\s*[#]*\s*Compress=',
-    notify   => Service['systemd-journald'],
+    #notify   => Service['systemd-journald'],
   }
 
   # Ensure journald is configured to send logs to rsyslog
@@ -19,7 +19,7 @@ class hardening::features::journald {
     line     => 'ForwardToSyslog=yes',
     multiple => false,
     match    => '^\s*[#]*\s*ForwardToSyslog=',
-    notify   => Service['systemd-journald'],
+    #notify   => Service['systemd-journald'],
   }
 
   # Ensure journald is configured to write log files to persistent disk
@@ -29,13 +29,14 @@ class hardening::features::journald {
     line     => 'Storage=persistent',
     multiple => false,
     match    => '^\s*[#]*\s*Storage=',
-    notify   => Service['systemd-journald'],
+    #notify   => Service['systemd-journald'],
 
   }
 
-  service { 'systemd-journald':
-    ensure => 'running',
-    enable => true,
-  }
+
+  #service { 'systemd-journald':
+  #  ensure => 'running',
+  #  enable => true,
+  #}
 
 }
