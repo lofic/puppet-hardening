@@ -26,12 +26,5 @@ class hardening::features::mounts {
     mode    => '0644',
   }
 
-  file_line { 'tmpfs - noexec':
-    path     => '/etc/fstab',
-    line     => 'tmpfs /dev/shm tmpfs defaults,noexec 0 0',
-    multiple => false,
-    match    => 'tmpfs\s+'
-  }
-
 
 }

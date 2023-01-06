@@ -25,8 +25,16 @@ class hardening::features::network inherits hardening {
       net.ipv4.icmp_ignore_bogus_error_responses = 1
       net.ipv4.conf.all.rp_filter = 1
       net.ipv4.conf.default.rp_filter = 1
+
       net.ipv6.conf.all.accept_ra = 0
       net.ipv6.conf.default.accept_ra = 0
+      net.ipv6.conf.all.accept_redirects = 0
+      net.ipv6.conf.default.accept_redirects = 0
+      net.ipv6.conf.all.accept_source_route = 0
+      net.ipv6.conf.default.accept_source_route = 0
+      net.ipv6.conf.all.forwarding = 0
+      net.ipv6.conf.default.forwarding = 0
+
 
       net.ipv4.ip_forward=${ip_forward}
       | SCN
