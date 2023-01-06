@@ -11,4 +11,5 @@ class hardening (
   Boolean $ip_forwarding = false,
   Numeric $interactive_session_timeout_sec = 900,
   String  $authselect_profile = 'sssd',
+  String  $banner_message,
 ) {}

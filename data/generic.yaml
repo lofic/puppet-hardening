@@ -1,0 +1,12 @@
+hardening::banner_message: |
+  ** UNAUTHORIZED ACCESS TO THIS SYSTEM IS PROHIBITED.                         **
+  ** This system, the software and information it contains and the devices     **
+  ** connected are exclusively reserved for authorized users only.             **
+  ** All activity on this system can be monitored and recorded and may be      **
+  ** disclosed or used for any authorized purpose.                             **
+  ** Unauthorized attempts and actions to access or use this system            **
+  ** constitute an infringement and may lead to legal actions.                 **
+
+# This System, the software and information it contains and the devices
+# connected are the property of XXXX and exclusively reserved for authorized
+# users only.
