@@ -1,31 +1,19 @@
 class hardening::features::fileperms() {
 
-  file { '/etc/cron.hourly':
+  $crondefaults = {
     ensure => directory,
     owner  => 'root',
     group  => 'root',
     mode   => '0700',
   }
 
-  file { '/etc/cron.daily':
-    ensure => directory,
-    owner  => 'root',
-    group  => 'root',
-    mode   => '0700',
-  }
-
-  file { '/etc/cron.weekly':
-    ensure => directory,
-    owner  => 'root',
-    group  => 'root',
-    mode   => '0700',
-  }
-
-  file { '/etc/cron.monthly':
-    ensure => directory,
-    owner  => 'root',
-    group  => 'root',
-    mode   => '0700',
+  file {
+    default: * => $crondefaults;
+    '/etc/cron.hourly':;
+    '/etc/cron.daily':;
+    '/etc/cron.weekly':;
+    '/etc/cron.monthly':;
+    '/etc/cron.d':;
   }
 
   file { '/etc/crontab':
@@ -35,11 +23,5 @@ class hardening::features::fileperms() {
     mode   => '0600',
   }
 
-  file { '/etc/cron.d':
-    ensure => directory,
-    owner  => 'root',
-    group  => 'root',
-    mode   => '0700',
-  }
 
 }

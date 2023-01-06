@@ -1,6 +1,7 @@
 class hardening::el8() {
 
   include hardening::features::aide
+  include hardening::features::auditd
   include hardening::features::authselect
   include hardening::features::banner
   include hardening::features::bootloader
