@@ -7,6 +7,7 @@ class hardening::el8() {
   include hardening::features::chrony
   include hardening::features::coredumps
   include hardening::features::fileperms
+  include hardening::features::journald
   include hardening::features::kernel
   include hardening::features::mounts
   include hardening::features::network
