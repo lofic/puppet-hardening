@@ -7,7 +7,7 @@
 
 class hardening (
   String  $banner_message,
-  Array   $ssh_options,
+  Hash    $ssh_options,
   String  $authselect_profile = 'sssd',
   Boolean $coredumps = false,
   Numeric $interactive_session_timeout_sec = 900,
